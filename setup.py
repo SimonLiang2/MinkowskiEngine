@@ -198,7 +198,7 @@ if not (BLAS is False):  # False only when not set, str otherwise
         extra_link_args += [f"-Wl,-rpath,{BLAS_LIBRARY_DIRS}"]
 else:
     # find the default BLAS library
-    import numpy.distutils.system_info as sysinfo
+    print("Running on a non-Windows platform, skipping distutils setup.")
 
     # Search blas in this order
     for blas in BLAS_LIST:
